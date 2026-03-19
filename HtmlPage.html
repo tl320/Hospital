@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html> <!-- this is the html file i'll be working on for the project'-->
+
+<html lang="en">
+ <!-- making the language used in the website english -->
+<a href="https://www.HospitalAppointment/PatientAccountDetails.com" target="_blank">Visit HospitalWe.com!</a> <!--link doesnt work yet-->
+<head>
+    <meta charset="utf-8" /> <!-- font size and characteristics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Account Info</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+    <!-- to preview the website just right-click on the IDE and select "view in browser (internal browser as the link does't work yet')" -->
+
+</head>
+<body>
+    <h1>
+        <!-- header 1 named "Patient Account" -->
+        Patient Account Details
+    </h1>
+    <h2>
+        <!-- header 2 is the patient being able to provide thier full name (first and last)-->
+        First and Last Name:
+    </h2>
+    <form action="/js/HtmlPage.html">
+        <label for=" fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br> <br>
+        <label for="lname">Last name: </label>
+        <input type="text" id="lname" name="lname"><br> <br>
+
+
+        <h3>
+            <label for="Phone Number">Phone Number:</label>
+            <input type="text" id="Phone Number" name="Phone Number"><br> <br>
+            <br>
+        </h3>
+        <br>
+        <input type="submit" value="Submit">
+        <br>
+
+
+        <h4>
+            Record your Appointment
+        </h4>
+        <form2 id=" scheduleForm">
+            <label for="event">Event:</label>
+            <input type="text" id="event" name="event" required> <br> <br>
+            <label for="date">Date:</label>
+            <input type="text" id=" date" name="date" required> <br> <br>
+            <label for="time">Time:</label>
+            <input type="text" id="time" name="time" required> <br> <br>
+                   <input type="submit" value="schedule">
+            <div> id ="message"> </div>
+            <input type="submit" value="Submit">
+            <br>
+
+        </form2>
+
+    </form>
+    <script src="./JavaScript.js"> </script> <!--linking the Javascript file, this will allow us to easily input a schedule with the php file-->
+</body>
+
+</html> <!--css file will stylize the file for website -->
