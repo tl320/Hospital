@@ -12,11 +12,13 @@ namespace Hospital_user_interface
 {
     public partial class Form1 : Form
     {
+        string Email;
+        string Password;
+
         public Form1()
         {
             InitializeComponent();
-            string Email;
-            string Password;
+
         }
         //btw if the UI form shows an error symbol when you exit and open up the project again, just go to where the project files are located and delete the obj and bin files, the form should show after that
 
@@ -46,12 +48,14 @@ namespace Hospital_user_interface
             this.Close(); //this is tested and it works
         }
 
-        private void LoginButton_Click(object sender, EventArgs e, string Email, string Password) //code for the login button, this might be very long
+        private void LoginButton_Click(object sender, EventArgs e) //code for the login button, this might be very long
         {
+            string InputEmail = Email; ;
+            string InputPassword = Password;
+
+
             //this has not been tested yet, all just theory
-
-
-            if (Email == Email || Password == Password) // variable scoping fixed, but currently trying to find a better comparison to check if the login credentials ae correct
+            if (InputEmail.ToLower().EndsWith("@Gmail.com") && InputPassword.ToLower().EndsWith("@Gmail.com")) // variable scoping fixed, but currently trying to find a better comparison to check if the login credentials ae correct
             {
                 MessageBox.Show("Invald Email or Password");
             }
