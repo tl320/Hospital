@@ -1,2 +1,80 @@
 ﻿body {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+
+header, h2, h3, h4, body {
+    background-color: #f0f0f0; /*apparently to chose the color you have to define hexadecimal*/
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+}
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('Roboto_Condensed-Extra-Light.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+body { /*applying the roboto font to the body section of the html file*/
+
+    font-family: 'RobotoCondensed', sans-serif;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased; /* Makes thin fonts look smoother */
+}
+h1, h2, h3, h4 { /*applying the roboto font to the h1, h2 section of the html file*/
+    font-family: 'RobotoCondensed', sans-serif;
+    text-transform: uppercase; /* uppercase the fonts for aesthetic reasons */
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+input, button, select, textarea { /*roboto font style for the functionailty of the buttons*/
+    font-family: 'RobotoCondensed', sans-serif;
+}
+.appointment-row {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+    .appointment-row input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+.schedule-btn {
+    padding: 8px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.spinner { /*referenced in the javascript file, this is the visual spinner for when the appoinemnt button has been clicked*/
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

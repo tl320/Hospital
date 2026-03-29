@@ -2,60 +2,60 @@
 
 <html lang="en">
  <!-- making the language used in the website english -->
-<a href="https://www.HospitalAppointment/PatientAccountDetails.com" target="_blank">Visit HospitalWe.com!</a> <!--link doesnt work yet-->
 <head>
     <meta charset="utf-8" /> <!-- font size and characteristics -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient Account Info</title>
+    <title>Patient Schedule Page</title>
     <link rel="stylesheet" href="StyleSheet.css">
     <!-- to preview the website just right-click on the IDE and select "view in browser (internal browser as the link does't work yet')" -->
 
 </head>
 <body>
+    <form id="scheduleForm">
     <h1>
-        <!-- header 1 named "Patient Account" -->
-        Patient Account Details
+        <!-- header 1 named "Patient Account" --> Patient Account Details
     </h1>
+
+    <div class="Patient Info">
     <h2>
         <!-- header 2 is the patient being able to provide thier full name (first and last)-->
         First and Last Name:
     </h2>
-    <form action="/js/HtmlPage.html">
-        <label for=" fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br> <br>
-        <label for="lname">Last name: </label>
-        <input type="text" id="lname" name="lname"><br> <br>
-
-
+    
+        <label>First name: <input type="text" id="fname" name="fname" placeholder="Patient First Name" required></label>
+        <br>
+        <label>Last name: <input type="text" id="lname" name="lname" placeholder="Patient Last Name" required></label>
+        <br>
+    
         <h3>
-            <label for="Phone Number">Phone Number:</label>
-            <input type="text" id="Phone Number" name="Phone Number"><br> <br>
-            <br>
+            <label>Phone Number:<input type="tel" name="Phone Number" pattern="[0-9]{10}" placeholder="1234567890" required></label>
+
         </h3>
-        <br>
-        <input type="submit" value="Submit">
-        <br>
+        </div>
+  
+     <hr>
+   
+         <div class="Appointment-Section">
+        
+            <div class="Appointment Details">
+                <h4>
+                    Record your Appointment
+                </h4>
+                 <label>Event: <input type="text" name="event" placeholder="e.g. Checkup" required></label>
+                 <label>Date: <input type="date" name="date" required></label>
+                 <label>Time: <input type="time" name="time" required></label>
 
+             
+                 <button type="submit"> Schedule Appointment</button>
 
-        <h4>
-            Record your Appointment
-        </h4>
-        <form2 id=" scheduleForm">
-            <label for="event">Event:</label>
-            <input type="text" id="event" name="event" required> <br> <br>
-            <label for="date">Date:</label>
-            <input type="text" id=" date" name="date" required> <br> <br>
-            <label for="time">Time:</label>
-            <input type="text" id="time" name="time" required> <br> <br>
-                   <input type="submit" value="schedule">
-            <div> id ="message"> </div>
-            <input type="submit" value="Submit">
-            <br>
-
-        </form2>
-
+                 <div id="successMessage" style="display: none; color: green; margin-top: 10px;">
+                     Appointment scheduled successfully!
+                 </div>
+            </div>
+        </div>
     </form>
-    <script src="./JavaScript.js"> </script> <!--linking the Javascript file, this will allow us to easily input a schedule with the php file-->
+    <script src="JavaScript.js"></script>
+
 </body>
 
-</html> <!--css file will stylize the file for website -->
+</html> <!--css file will stylize website may or may not include images -->
